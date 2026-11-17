@@ -1,0 +1,1253 @@
+[
+    {
+        "id": "e7a51347090f2d9f",
+        "type": "tab",
+        "label": "Grundlagen",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e8f1f91a03810e73",
+        "type": "tab",
+        "label": "TCP Tipps",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "97d11ca5fdb07de0",
+        "type": "tab",
+        "label": "ARD und Serial",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "96c12efce98b295a",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1",
+        "type": "tab",
+        "label": "Gefahrgut Benachrichtigung",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "8f7b9af74fb039dc",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "c1440ae00090fa58",
+        "type": "mqtt-broker",
+        "name": "Broker",
+        "broker": "192.168.101.20",
+        "port": "1883",
+        "clientid": "IIOT NodeRed Docker Container",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "mqtt_broker",
+        "type": "mqtt-broker",
+        "name": "Mayer MQTT Broker",
+        "broker": "localhost",
+        "port": "1883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": false,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "abf74e6630059429",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Mein Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD.MM.YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "784aac14.5c2404",
+        "type": "ui_tab",
+        "name": "Station",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d5da3e9b.46abf",
+        "type": "ui_group",
+        "name": "Chili-Monitor",
+        "tab": "784aac14.5c2404",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "4d12288cab288442",
+        "type": "serial-port",
+        "serialport": "COM3",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "20",
+        "bin": "bin",
+        "out": "time",
+        "addchar": "false",
+        "responsetimeout": "20000"
+    },
+    {
+        "id": "0b0bbcb11f3dc979",
+        "type": "mqtt-broker",
+        "name": "IIOTBroker",
+        "broker": "192.168.101.20",
+        "port": 1883,
+        "clientid": "IIOT NR Docker Container",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": false,
+        "autoUnsubscribe": false,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "f0565ba8ce55f1ce",
+        "type": "inject",
+        "z": "e7a51347090f2d9f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 140,
+        "wires": [
+            [
+                "b47ac5d91a4abc58"
+            ]
+        ]
+    },
+    {
+        "id": "b47ac5d91a4abc58",
+        "type": "debug",
+        "z": "e7a51347090f2d9f",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 520,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "9df36f39132b8c56",
+        "type": "comment",
+        "z": "e7a51347090f2d9f",
+        "name": "Ein Inject Node injiziert Nachrichten (payload).  Einmalig oder auch in Intervallen.",
+        "info": " ",
+        "x": 360,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "d9ba797b770cab2c",
+        "type": "comment",
+        "z": "e7a51347090f2d9f",
+        "name": "Der Debug Node zeigt Nachrichten entweder in der Debug Konsole  und/oder unter dem Node an",
+        "info": "",
+        "x": 710,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "b6429545e2a0a46b",
+        "type": "inject",
+        "z": "e7a51347090f2d9f",
+        "name": "Zahl",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "90",
+        "payloadType": "num",
+        "x": 150,
+        "y": 360,
+        "wires": [
+            [
+                "957609813ca8ad94"
+            ]
+        ]
+    },
+    {
+        "id": "957609813ca8ad94",
+        "type": "switch",
+        "z": "e7a51347090f2d9f",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "100",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 470,
+        "y": 380,
+        "wires": [
+            [
+                "5da35a79cf455fc7"
+            ],
+            [
+                "3fd683589a22af7c"
+            ]
+        ]
+    },
+    {
+        "id": "5da35a79cf455fc7",
+        "type": "range",
+        "z": "e7a51347090f2d9f",
+        "minin": "0",
+        "maxin": "100",
+        "minout": "0",
+        "maxout": "1",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 650,
+        "y": 340,
+        "wires": [
+            [
+                "f301f6ee645ae3e7",
+                "fc425df4130dbd81"
+            ]
+        ]
+    },
+    {
+        "id": "f301f6ee645ae3e7",
+        "type": "debug",
+        "z": "e7a51347090f2d9f",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 840,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ac4d4bb5153b573e",
+        "type": "debug",
+        "z": "e7a51347090f2d9f",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 840,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "3fd683589a22af7c",
+        "type": "change",
+        "z": "e7a51347090f2d9f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Wert nicht zwischen 0 und 100 !",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 520,
+        "wires": [
+            [
+                "ac4d4bb5153b573e"
+            ]
+        ]
+    },
+    {
+        "id": "1face7604987e2fc",
+        "type": "comment",
+        "z": "e7a51347090f2d9f",
+        "name": "Beispiele für einfache Entscheidungen/Kovertierungen",
+        "info": "",
+        "x": 280,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "fc425df4130dbd81",
+        "type": "file",
+        "z": "e7a51347090f2d9f",
+        "name": "Schreibe Datei",
+        "filename": "NodeRed.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "utf8",
+        "x": 860,
+        "y": 440,
+        "wires": [
+            [
+                "fb7c4ccf8e290327"
+            ]
+        ]
+    },
+    {
+        "id": "c5f00d7e84cab0a9",
+        "type": "inject",
+        "z": "e7a51347090f2d9f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 480,
+        "wires": [
+            [
+                "af8b70813b615968"
+            ]
+        ]
+    },
+    {
+        "id": "5b77bdebf92f65fa",
+        "type": "comment",
+        "z": "e7a51347090f2d9f",
+        "name": "Aus Palette installiert !",
+        "info": "",
+        "x": 360,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "fb7c4ccf8e290327",
+        "type": "delay",
+        "z": "e7a51347090f2d9f",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1060,
+        "y": 440,
+        "wires": [
+            [
+                "0e85bfc8ec65a830"
+            ]
+        ]
+    },
+    {
+        "id": "0e85bfc8ec65a830",
+        "type": "exec",
+        "z": "e7a51347090f2d9f",
+        "command": "rm NodeRed.txt",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 1220,
+        "y": 480,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "af8b70813b615968",
+        "type": "random",
+        "z": "e7a51347090f2d9f",
+        "name": "",
+        "low": "0",
+        "high": "150",
+        "inte": "true",
+        "property": "payload",
+        "x": 320,
+        "y": 480,
+        "wires": [
+            [
+                "957609813ca8ad94"
+            ]
+        ]
+    },
+    {
+        "id": "52b1bfcd74112eed",
+        "type": "debug",
+        "z": "e8f1f91a03810e73",
+        "name": "TCP",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 370,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "6869d81d28868134",
+        "type": "debug",
+        "z": "e8f1f91a03810e73",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 580,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "0ba80829dbfa956f",
+        "type": "function",
+        "z": "e8f1f91a03810e73",
+        "name": "Temp",
+        "func": "\nvar temp1= msg.payload[0];\nvar temp2= msg.payload[1];\nvar temp3= msg.payload[3];\nvar temp4= msg.payload[4];\n\nvar result = temp1+temp2 + '.' + temp3 + temp4; \nresult = Number(result);\n\nvar result1 = {payload:result};\n\nreturn[result1];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 300,
+        "wires": [
+            [
+                "6869d81d28868134",
+                "38bcd0fdf206d0b8"
+            ]
+        ]
+    },
+    {
+        "id": "a8e9051378115c1f",
+        "type": "function",
+        "z": "e8f1f91a03810e73",
+        "name": "Humidity",
+        "func": "\nvar hum1= msg.payload[5];\nvar hum2= msg.payload[6];\nvar hum3= msg.payload[8];\nvar hum4= msg.payload[9];\n\nvar result = hum1 + hum2 + '.' + hum3 + hum4; \nresult = Number(result);\n\nvar result1 = {payload:result};\n\nreturn[result1];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 180,
+        "wires": [
+            [
+                "d5ae0feda2672d29",
+                "cb9de53940d2bf04"
+            ]
+        ]
+    },
+    {
+        "id": "d5ae0feda2672d29",
+        "type": "debug",
+        "z": "e8f1f91a03810e73",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 580,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "b361b5eb7184da4a",
+        "type": "tcp out",
+        "z": "e8f1f91a03810e73",
+        "name": "",
+        "host": "localhost",
+        "port": "5000",
+        "beserver": "client",
+        "base64": false,
+        "end": false,
+        "tls": "",
+        "x": 250,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "d1ea71fa472ab7ac",
+        "type": "inject",
+        "z": "e8f1f91a03810e73",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "12.3498.76",
+        "payloadType": "str",
+        "x": 130,
+        "y": 320,
+        "wires": [
+            [
+                "b361b5eb7184da4a"
+            ]
+        ]
+    },
+    {
+        "id": "42b6f710cd200434",
+        "type": "tcp in",
+        "z": "e8f1f91a03810e73",
+        "name": "",
+        "server": "server",
+        "host": "",
+        "port": "5000",
+        "datamode": "stream",
+        "datatype": "utf8",
+        "newline": "",
+        "topic": "",
+        "trim": false,
+        "base64": false,
+        "tls": "",
+        "x": 160,
+        "y": 200,
+        "wires": [
+            [
+                "a8e9051378115c1f",
+                "0ba80829dbfa956f",
+                "52b1bfcd74112eed"
+            ]
+        ]
+    },
+    {
+        "id": "38bcd0fdf206d0b8",
+        "type": "ui_gauge",
+        "z": "e8f1f91a03810e73",
+        "name": "Temp",
+        "group": "d5da3e9b.46abf",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "temp",
+        "label": "units",
+        "format": "{{value}} °C",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 570,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "cb9de53940d2bf04",
+        "type": "ui_gauge",
+        "z": "e8f1f91a03810e73",
+        "name": "Humidity",
+        "group": "d5da3e9b.46abf",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "units",
+        "format": "{{value}}%",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 580,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "864544e6a64ee956",
+        "type": "function",
+        "z": "97d11ca5fdb07de0",
+        "name": "Temp",
+        "func": "\nvar temp1= msg.payload[6]-48;\nvar temp2= msg.payload[7]-48;\nvar temp3= msg.payload[9]-48;\nvar temp4= msg.payload[10]-48;\n\nvar result = (temp1*1000)+ (temp2*100) + (temp3*10) + temp4; \nresult = result/100;\n\nvar result1 = {payload:result};\n\nreturn[result1];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 307.07645416259766,
+        "y": 92.56599521636963,
+        "wires": [
+            [
+                "e5716cb73973e8c5",
+                "403172d42ae41d61"
+            ]
+        ]
+    },
+    {
+        "id": "e5716cb73973e8c5",
+        "type": "debug",
+        "z": "97d11ca5fdb07de0",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 581.3498992919922,
+        "y": 37.79081916809082,
+        "wires": []
+    },
+    {
+        "id": "18cc202c652d66d1",
+        "type": "function",
+        "z": "97d11ca5fdb07de0",
+        "name": "Humidity",
+        "func": "var hum1= msg.payload[0]-48;\nvar hum2= msg.payload[1]-48;\nvar hum3= msg.payload[3]-48;\nvar hum4= msg.payload[4]-48;\n\nvar result = (hum1*1000)+ (hum2*100) + (hum3*10) + hum4; \nresult = result/100;\n\nvar result1 = {payload:result};\n\nreturn[result1];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 315.0911521911621,
+        "y": 286.6883945465088,
+        "wires": [
+            [
+                "180ebf255f0eac7f",
+                "c2f6e248dae4a85c"
+            ]
+        ]
+    },
+    {
+        "id": "180ebf255f0eac7f",
+        "type": "debug",
+        "z": "97d11ca5fdb07de0",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 582.6041069030762,
+        "y": 361.12417221069336,
+        "wires": []
+    },
+    {
+        "id": "e9fe13ea7928489a",
+        "type": "debug",
+        "z": "97d11ca5fdb07de0",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 380,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "c2f6e248dae4a85c",
+        "type": "ui_gauge",
+        "z": "97d11ca5fdb07de0",
+        "d": true,
+        "name": "Humidity",
+        "group": "d5da3e9b.46abf",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "units",
+        "format": "{{value}}%",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 583.8411865234375,
+        "y": 288.4635429382324,
+        "wires": []
+    },
+    {
+        "id": "403172d42ae41d61",
+        "type": "ui_gauge",
+        "z": "97d11ca5fdb07de0",
+        "name": "",
+        "group": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 570,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "608d288523a67631",
+        "type": "serial in",
+        "z": "97d11ca5fdb07de0",
+        "name": "Arduino",
+        "serial": "4d12288cab288442",
+        "x": 137.5173568725586,
+        "y": 193.7500286102295,
+        "wires": [
+            [
+                "864544e6a64ee956",
+                "18cc202c652d66d1",
+                "e9fe13ea7928489a"
+            ]
+        ]
+    },
+    {
+        "id": "46856992e0c2b200",
+        "type": "mqtt in",
+        "z": "96c12efce98b295a",
+        "name": "",
+        "topic": "#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "0b0bbcb11f3dc979",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 180,
+        "wires": [
+            [
+                "438b3472c9a0c2ca"
+            ]
+        ]
+    },
+    {
+        "id": "438b3472c9a0c2ca",
+        "type": "debug",
+        "z": "96c12efce98b295a",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 500,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "8a1c57e7f063010a",
+        "type": "inject",
+        "z": "96c12efce98b295a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 300,
+        "wires": [
+            [
+                "15d112d606c75bdf"
+            ]
+        ]
+    },
+    {
+        "id": "15d112d606c75bdf",
+        "type": "mqtt out",
+        "z": "96c12efce98b295a",
+        "name": "",
+        "topic": "K104/T",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0b0bbcb11f3dc979",
+        "x": 360,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "mqtt_in",
+        "type": "mqtt in",
+        "z": "1",
+        "name": "MQTT Input - SPECIALUNITLOAD",
+        "topic": "#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "c1440ae00090fa58",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 160,
+        "y": 200,
+        "wires": [
+            [
+                "switch",
+                "5ea2b587e7ee1dcb"
+            ]
+        ]
+    },
+    {
+        "id": "switch",
+        "type": "switch",
+        "z": "1",
+        "name": "Überprüfung Gefahrgut",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "GEFAHR",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 470,
+        "y": 200,
+        "wires": [
+            [
+                "email",
+                "mqtt_out",
+                "1f2a1a5ea295aa62"
+            ]
+        ]
+    },
+    {
+        "id": "mqtt_out",
+        "type": "mqtt out",
+        "z": "1",
+        "d": true,
+        "name": "MQTT Output - DANGEROUSLOADING",
+        "topic": "DANGEROUSLOADING",
+        "qos": "2",
+        "retain": false,
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c1440ae00090fa58",
+        "x": 800,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "5ea2b587e7ee1dcb",
+        "type": "debug",
+        "z": "1",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 430,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "1f2a1a5ea295aa62",
+        "type": "debug",
+        "z": "1",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 700,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "email",
+        "type": "e-mail",
+        "z": "1",
+        "d": true,
+        "server": "smtp.mayer-gmbh.de",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": false,
+        "token": "",
+        "secure": true,
+        "tls": true,
+        "name": "E-Mail an Hallenmeister",
+        "dname": "",
+        "x": 750,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "5920883248556313",
+        "type": "mqtt in",
+        "z": "1",
+        "name": "",
+        "topic": "#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "c1440ae00090fa58",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 440,
+        "wires": [
+            [
+                "151f3b60992bd387"
+            ]
+        ]
+    },
+    {
+        "id": "151f3b60992bd387",
+        "type": "debug",
+        "z": "1",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "143c1abdb43822f9",
+        "type": "inject",
+        "z": "1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "bku/ITTechzentrum/K104/T",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 560,
+        "wires": [
+            [
+                "b06da622a0e89b10"
+            ]
+        ]
+    },
+    {
+        "id": "b06da622a0e89b10",
+        "type": "mqtt out",
+        "z": "1",
+        "name": "",
+        "topic": "bku/ITTechzentrum/K104/T",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0b0bbcb11f3dc979",
+        "x": 580,
+        "y": 560,
+        "wires": []
+    }
+]

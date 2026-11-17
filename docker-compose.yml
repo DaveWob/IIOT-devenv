@@ -1,0 +1,52 @@
+# docker compose Datei IIOT (Industrial IoT) ------------------------------------------
+# startet einen moquitto broker und einen nodered container
+# Kommandozeilenbefehle im Verzeichnis mit dieser Datei auszuführen:
+# Erzeugen der Container: docker compose up -d
+# Löschen der Container : docker compose down
+# Stoppen der Container : docker compose stop
+# Starten der Container : docker compose start
+#
+# In einer Mosquitto Shell:
+# Anzeigen aller eingehenden Nachrichten:
+# mosquitto_sub -t '#' -v
+# Anzeigen der Nachrichten im Topic /K104/T
+# mosquitto_sub -t '/K104/T' -v
+# Versenden einer Nachricht (22) an dieses Topic:
+# mosquitto_pub -t '/K104/T' -m 22 
+#---------------------------------------------------------------------
+name: iiot
+
+networks:
+  iiot-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.101.0/24
+
+services:
+  nodered:
+    image: nodered/node-red:latest
+    container_name: nodered
+    restart: unless-stopped
+    networks:
+      iiot-network:
+        ipv4_address: 192.168.101.10
+    ports:
+      - "80:1880"
+    volumes:
+      - ./nodered_data:/data
+
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    container_name: mosquitto
+    restart: unless-stopped
+    networks:
+      iiot-network:
+        ipv4_address: 192.168.101.20
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./mosquitto_config:/mosquitto/config
+      - ./mosquitto_data:/mosquitto/data
+      - ./mosquitto_log:/mosquitto/log
+

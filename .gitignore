@@ -1,0 +1,22 @@
+# --- Node-RED ---------------------------------------------------------
+# Verschlüsselte Zugangsdaten und der zugehörige Schlüssel gehören nicht ins Repo.
+# Node-RED erzeugt beim ersten Start automatisch einen neuen Schlüssel.
+nodered_data/flows_cred.json
+nodered_data/.config.runtime.json
+# Persönliche Editor-Einstellungen
+nodered_data/.config.users.json
+# Backups und npm-Cache
+nodered_data/*.backup
+nodered_data/.npm/
+
+# --- Mosquitto --------------------------------------------------------
+# Laufzeitdaten und Logs, Ordner selbst bleiben über .gitkeep erhalten
+mosquitto_data/*
+!mosquitto_data/.gitkeep
+mosquitto_log/*
+!mosquitto_log/.gitkeep
+
+# --- Sonstiges --------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
