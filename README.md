@@ -268,8 +268,8 @@ winget install -e --id Docker.DockerDesktop
 
 **Mit Git:**
 ```powershell
-git clone <URL-dieses-Repositories>
-cd <Name-des-Ordners>
+git clone https://github.com/DaveWob/IIOT-devenv.git
+cd IIOT-devenv
 ```
 
 **Ohne Git:** Auf GitHub oben rechts auf **Code → Download ZIP** klicken, ZIP entpacken und den Ordner öffnen.
